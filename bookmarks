@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-capture-last-stored"
+ (filename . "~/Documents/OSCD/Info-System/Note/20200526174916-windows输入法添加小鹤双拼.org")
+ (front-context-string . "#+TITLE: windows")
+ (rear-context-string)
+ (position . 1))
+)

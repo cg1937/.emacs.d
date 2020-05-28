@@ -1,0 +1,128 @@
+emacs -nw 
+env
+uname -a
+ls
+pwd
+dired .
+ls
+pwd
+clear
+ls
+ls
+ls
+pwd
+clear
+ls
+dired .emacs.d/
+ls
+cd ./OSCD/
+ls
+$(load-path)
+cd ~
+ls
+cd ./.emacs.d/
+mkdir aweshell
+cd ./aweshell/
+cp ~/Downloads/aweshell-master/* .
+ls
+rm *.gif
+ls
+rm README.md 
+cd ..
+ls
+pwd
+rm eshell-setting.el
+cd ~/OSCD/
+ls
+pwd
+;s
+ls
+rm nohup.out 
+ls
+ls
+cd ./Info-System/
+ls
+cd ./Note/
+ls
+rm fix-input-method-for-shuangpin.org\~ fix-input-method-for-shuangpin.org 
+rm 20200526174018-test_org.org 
+ls
+rm windows_registry.org\~ windows_registry.org 
+ls
+git pull
+ls
+pwd
+ls
+pwd
+ls
+pwd
+ff
+f
+ff
+which ff
+fw
+fr
+find-file 
+copy-pwd
+ls
+pwd
+clear
+ls
+pwd
+find-file
+ff
+fw
+fr
+ls
+pwd
+ls
+ls
+pwd
+cd ..
+cd..
+ls
+cd ./OSCD/
+ls
+pwd
+cd ..
+scr
+screen
+ls
+pwd
+cd ./OSCD/
+ls
+git -version
+git --version
+ls
+pwd
+dired README.md 
+ls
+ls
+cd ..
+cd ./OSCD/
+ls
+pwd
+ls
+pwd
+pwd
+ls
+git commit -m "upload the org-mode file"
+git push
+git add .
+git commit -m "upload the org-mode file"
+git push
+git push
+ls
+cd ~
+screenfetch
+git clone --depth=1 https://github.com/manateelazycat/awesome-tab.git
+ls
+cd ./awesome-tab/
+ls
+mv awesome-tab.el ~/.emacs.d/lisp/
+cd ~
+SKTOP-V8MB2Q0]──[19:57]──[/home/cg1937]└─> λ SKTOP-V8MB2Q0]──[19:57]──[/home/cg1937]└─> λ sudo apt-get install ttf-wqy-microhei
+sudo apt-get install ttf-wqy-microhei
+cd ../
+cd ./OSCD/
+ls
