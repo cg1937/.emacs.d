@@ -5,7 +5,7 @@
 
 ;; disable menu bar and tool bar
 (menu-bar-mode -1)
-(tool-bar-mode -)
+(tool-bar-mode -1)
 
 ;; org-protocol setting, now use for org-roam's graph clickable
 (server-start)

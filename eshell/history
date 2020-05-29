@@ -1,29 +1,3 @@
-dired .emacs.d/
-ls
-cd ./OSCD/
-ls
-$(load-path)
-cd ~
-ls
-cd ./.emacs.d/
-mkdir aweshell
-cd ./aweshell/
-cp ~/Downloads/aweshell-master/* .
-ls
-rm *.gif
-ls
-rm README.md 
-cd ..
-ls
-pwd
-rm eshell-setting.el
-cd ~/OSCD/
-ls
-pwd
-;s
-ls
-rm nohup.out 
-ls
 ls
 cd ./Info-System/
 ls
@@ -123,6 +97,32 @@ git pull
 ls
 ppwd
 find ~/.emacs.d/elpa/ -iname "ivy-avy.elc" -delete
- cd ./.emacs.d/elpa/ivy-20200527.2021/
+cd ./.emacs.d/elpa/ivy-20200527.2021/
 ls
 find ~/.emacs.d/elpa/ -iname "*.elc" -delete
+cd ..
+ls
+git add .
+git commit -m "add ivy, fix problem for ivy-avy"
+git push
+git push orgin master
+ls
+echo *(:U)
+;s
+ls
+rm init.el\~ recentf\~
+cd ./auto-save-list/
+ls
+cd ..
+cd ./lisp/
+ls
+ cat init-eshell.el 
+rm init-eshell.el\~ init-eshell.el 
+cd ..
+cd ..
+cd ./.emacs.d/
+git add .
+ls , 
+ls && pwd
+git add . && git commit -m "clean the init.el" && git push origin master
+ls && pwd
