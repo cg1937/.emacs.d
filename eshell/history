@@ -1,6 +1,3 @@
-ls
-cd ./Info-System/
-ls
 cd ./Note/
 ls
 rm fix-input-method-for-shuangpin.org\~ fix-input-method-for-shuangpin.org 
@@ -116,7 +113,7 @@ ls
 cd ..
 cd ./lisp/
 ls
- cat init-eshell.el 
+cat init-eshell.el 
 rm init-eshell.el\~ init-eshell.el 
 cd ..
 cd ..
@@ -126,3 +123,6 @@ ls ,
 ls && pwd
 git add . && git commit -m "clean the init.el" && git push origin master
 ls && pwd
+ls
+ll -la
+ls -la

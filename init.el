@@ -3,9 +3,12 @@
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; disable menu bar and tool bar
+;; disable menu bar
 (menu-bar-mode -1)
+;; disable tool bar
 (tool-bar-mode -1)
+;; disable scroll bar
+(scroll-bar-mode -1)
 
 ;; org-protocol setting, now use for org-roam's graph clickable
 (server-start)
