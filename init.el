@@ -123,7 +123,7 @@
 
 ;; ivy setting
 (require 'ivy-avy)
-;; fix the can't load ivy-avy function
+;; fix can't load ivy-avy function
 (use-package ivy :ensure t
   :diminish (ivy-mode . "")
   :bind
