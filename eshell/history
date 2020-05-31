@@ -117,10 +117,10 @@ ls && pwd
 ls
 ll -la
 ls -la
- g++ cpp_test.cc 
+g++ cpp_test.cc 
 ls
 ./a.out 
- g++ cpp_test.cc 
+g++ cpp_test.cc 
 g++ cpp_test.cc
 g++ cpp_test.cc
 g++ cpp_test.cc

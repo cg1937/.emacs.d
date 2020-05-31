@@ -3,6 +3,8 @@
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; theme
+(load-theme 'moe-light t)
 ;; disable menu bar
 (menu-bar-mode -1)
 ;; disable tool bar
@@ -27,15 +29,15 @@
    (quote
     (97 115 100 102 103 104 106 107 108 113 119 101 114 117 105 111 112)))
  '(avy-timeout-seconds 0.2)
- '(custom-enabled-themes (quote (dracula)))
+ '(company-clang-executable "/usr/bin/clang++")
  '(custom-safe-themes
    (quote
-    ("d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default)))
+    ("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default)))
  '(org-roam-directory "~/OSCD/Info-System/Note/")
  '(org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
  '(package-selected-packages
    (quote
-    (powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+    (moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
 
 ;; setting the default encoding method
 (prefer-coding-system 'utf-8)
@@ -159,7 +161,9 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; powerline
+;; powerline (use moe-theme)
 
 (require 'powerline)
-(powerline-default-theme)
+(require 'moe-theme)
+(powerline-moe-theme)
+(moe-theme-set-color 'red)
