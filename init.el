@@ -9,7 +9,8 @@
 (tool-bar-mode -1)
 ;; disable scroll bar
 (scroll-bar-mode -1)
-
+;; setting the line-number
+(global-display-line-numbers-mode 1)
 ;; org-protocol setting, now use for org-roam's graph clickable
 (server-start)
 (require 'org-protocol)
@@ -20,12 +21,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(avy-all-windows nil t)
- '(avy-background t t)
+ '(avy-all-windows nil)
+ '(avy-background t)
  '(avy-keys
    (quote
-    (97 115 100 102 103 104 106 107 108 113 119 101 114 117 105 111 112)) t)
- '(avy-timeout-seconds 0.2 t)
+    (97 115 100 102 103 104 106 107 108 113 119 101 114 117 105 111 112)))
+ '(avy-timeout-seconds 0.2)
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
@@ -34,7 +35,7 @@
  '(org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
  '(package-selected-packages
    (quote
-    (flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+    (powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
 
 ;; setting the default encoding method
 (prefer-coding-system 'utf-8)
@@ -124,7 +125,7 @@
 ;; ivy setting
 (require 'ivy-avy)
 ;; fix can't load ivy-avy function
-(use-package ivy :ensure t
+(use-package ivy :ensure
   :diminish (ivy-mode . "")
   :bind
   (:map ivy-mode-map
@@ -140,3 +141,25 @@
   ;; no regexp by default
   (setq ivy-fixed-height-minibuffer t))
   ;; fixed height
+
+;; multiple-cursors setting
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; yasnippet setting
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; powerline
+
+(require 'powerline)
+(powerline-default-theme)

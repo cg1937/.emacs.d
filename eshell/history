@@ -1,12 +1,3 @@
-cd ./Note/
-ls
-rm fix-input-method-for-shuangpin.org\~ fix-input-method-for-shuangpin.org 
-rm 20200526174018-test_org.org 
-ls
-rm windows_registry.org\~ windows_registry.org 
-ls
-git pull
-ls
 pwd
 ls
 pwd
@@ -126,3 +117,12 @@ ls && pwd
 ls
 ll -la
 ls -la
+ g++ cpp_test.cc 
+ls
+./a.out 
+ g++ cpp_test.cc 
+g++ cpp_test.cc
+g++ cpp_test.cc
+g++ cpp_test.cc
+g++ cpp_test.cc
+./a.out
