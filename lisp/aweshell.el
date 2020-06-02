@@ -615,7 +615,7 @@ This advice can make `other-window' skip `aweshell' dedicated window."
 (require 'eshell-prompt-extras)
 (with-eval-after-load "esh-opt"
   (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-pipeline))
+        eshell-prompt-function 'epe-theme-lambda))
 
 ;; Validate command before post to eshell.
 (defun aweshell-validate-command ()

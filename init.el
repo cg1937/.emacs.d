@@ -37,7 +37,7 @@
  '(org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
  '(package-selected-packages
    (quote
-    (moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+    (grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
 
 ;; setting the default encoding method
 (prefer-coding-system 'utf-8)
@@ -92,7 +92,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
-;; customize function for open init.el
+;; customize function
 (defun open-my-init-file()
   ;; open init.el  
   (interactive)
@@ -104,6 +104,13 @@
   (interactive)
   (load "~/.emacs.d/init.el"))
 (global-set-key(kbd "<f7>") 'load-my-init-file)
+
+(defun preview-org-mode-file-for-html()
+  ;; preview .org file use HTML format
+  (interactive)
+  (org-html-export-as-html)
+  (browse-url-of-buffer))
+(global-set-key(kbd "<f6>") 'preview-org-mode-file-for-html)
 
 ;; avy setting
 (require 'avy)
@@ -162,8 +169,9 @@
 (yas-global-mode 1)
 
 ;; powerline (use moe-theme)
-
+;; customize theme
 (require 'powerline)
 (require 'moe-theme)
 (powerline-moe-theme)
 (moe-theme-set-color 'red)
+
