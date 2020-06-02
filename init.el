@@ -13,6 +13,9 @@
 (scroll-bar-mode -1)
 ;; setting the line-number
 (global-display-line-numbers-mode 1)
+;; close the default welcome interface
+(setq inhibit-startup-message t)
+
 ;; org-protocol setting, now use for org-roam's graph clickable
 (server-start)
 (require 'org-protocol)
