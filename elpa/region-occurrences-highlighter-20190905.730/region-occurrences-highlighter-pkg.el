@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "region-occurrences-highlighter" "20190905.730" "Mark occurrences of current region (selection)." '((emacs "24")) :commit "ee86d6a79342c6e4b3cfad5ec73cb0a40e18ae3d" :keywords '("convenience") :authors '(("Álvaro González Sotillo" . "alvarogonzalezsotillo@gmail.com")) :maintainer '("Álvaro González Sotillo" . "alvarogonzalezsotillo@gmail.com") :url "https://github.com/alvarogonzalezsotillo/region-occurrences-highlighter")
