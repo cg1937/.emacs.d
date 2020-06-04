@@ -1,0 +1,15 @@
+ls
+pwd
+sudo pacman -S firefox
+ls
+sudo pacman -S graphviz
+sudo pacman -Syyu
+sudo pacman -Syyu
+sudo pacman -Syyu
+Y
+sudo pacman -Syyu
+sudo pacman -Syyu
+ls
+sudo pacman -Syyu
+ls
+pwd
