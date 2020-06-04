@@ -21,6 +21,9 @@
 (require 'org-protocol)
 (require 'org-roam-protocol)
 
+;; all-the-icons
+(require 'all-the-icons)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,7 +43,7 @@
  '(org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
  '(package-selected-packages
    (quote
-    (grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+    (all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
 
 ;; setting the default encoding method
 (prefer-coding-system 'utf-8)
@@ -90,6 +93,34 @@
                ("C-c n g" . org-roam-graph))
               :map org-mode-map
               (("C-c n i" . org-roam-insert))))
+
+(get-buffer-create "tmp")
+(call-process "/usr/bin/bash" nil "tmp" nil "-c" "uname -r")
+(set-buffer "tmp")
+(if (string-match ".*MANJARO" (buffer-string))
+    ((setq org-roam-graph-viewer "firefox")
+     ;; exwm setting
+;;(require 'exwm)
+;;(require 'exwm-config)
+;;(exwm-config-default)
+;;(require 'exwm-xim)
+;;(exwm-xim-enable)
+;;(push ?\C-\\ exwm-input-prefix-keys)
+
+;; telega setting
+     (setq telega-proxies
+	   (list
+	    '(:server "0.0.0.0" :port 8080 :enable :false
+		      :type (:@type "proxyTypeSocks5"
+				    :username "xxx" :password "test"))
+	    '(:server "127.0.0.1" :port 20170 :enable t
+		      :type (:@type "proxyTypeSocks5"
+				    :username "" :password ""))
+	    ))
+     (telega-notifications-mode 1)
+     )
+  (setq org-roam-graph-viewer "~/Downloads/basilisk/basilisk"))
+(kill-buffer "tmp")
 
 ;; magit setting
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -154,6 +185,20 @@
   (setq ivy-fixed-height-minibuffer t))
   ;; fixed height
 
+;; ivy-rich setting
+;;(require 'ivy-rich)
+;;(ivy-rich-mode 1)
+;;(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+
+;; all-icons-ivy-rich
+(all-the-icons-ivy-rich-mode 1)
+(ivy-rich-mode 1)
+  ;; The icon size
+(setq all-the-icons-ivy-rich-icon-size 1.0)
+  ;; Definitions for ivy-rich transformers.
+  ;; See `ivy-rich-display-transformers-list' for details."
+all-the-icons-ivy-rich-display-transformers-list
+
 ;; multiple-cursors setting
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -177,4 +222,6 @@
 (require 'moe-theme)
 (powerline-moe-theme)
 (moe-theme-set-color 'red)
+
+
 

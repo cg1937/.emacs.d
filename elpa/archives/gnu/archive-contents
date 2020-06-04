@@ -131,7 +131,7 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(12 2 2)
+	 [(12 2 3)
 	  ((emacs
 	    (24 1))
 	   (cl-lib
@@ -1106,7 +1106,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 11)
+	  [(1 0 12)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" single
@@ -2088,7 +2088,7 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 4 3 4)
+	[(2 4 3 5)
 	 ((emacs
 	   (24 4)))
 	 "Transparent Remote Access, Multiple Protocol" tar
