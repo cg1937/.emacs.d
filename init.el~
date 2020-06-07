@@ -6,7 +6,7 @@
 ;; theme
 (load-theme 'moe-light t)
 ;; disable menu bar
-(menu-bar-mode -1)
+;;(menu-bar-mode -1)
 ;; disable tool bar
 (tool-bar-mode -1)
 ;; disable scroll bar
@@ -21,6 +21,9 @@
 (require 'org-protocol)
 (require 'org-roam-protocol)
 
+;; all-the-icons
+(require 'all-the-icons)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,18 +32,17 @@
  '(avy-all-windows nil)
  '(avy-background t)
  '(avy-keys
-   (quote
-    (97 115 100 102 103 104 106 107 108 113 119 101 114 117 105 111 112)))
+   '(97 115 100 102 103 104 106 107 108 113 119 101 114 117 105 111 112))
  '(avy-timeout-seconds 0.2)
  '(company-clang-executable "/usr/bin/clang++")
  '(custom-safe-themes
-   (quote
-    ("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default)))
+   '("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default))
+ '(global-display-line-numbers-mode t)
  '(org-roam-directory "~/OSCD/Info-System/Note/")
  '(org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
  '(package-selected-packages
-   (quote
-    (all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+   '(all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))
+ '(tool-bar-mode nil))
 
 ;; setting the default encoding method
 (prefer-coding-system 'utf-8)
@@ -72,7 +74,7 @@
 (setq awesome-tab-height 120)
 
 ;; font setting, Sarasa Fonts can auto align, so not need cnfonts package
-(set-default-font "Sarasa Term SC-11")
+;;(set-default-font "Sarasa Term SC-11")
 
 ;; company-mode setting
 (add-hook 'after-init-hook 'global-company-mode)
@@ -83,7 +85,6 @@
       (after-init . org-roam-mode)
       :custom
       (org-roam-directory "~/OSCD/Info-System/Note/")
-      (org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
       :bind (:map org-roam-mode-map
               (("C-c n l" . org-roam)
                ("C-c n f" . org-roam-find-file)
@@ -91,12 +92,21 @@
               :map org-mode-map
               (("C-c n i" . org-roam-insert))))
 
-(get-buffer-create "tmp")
-(call-process "/usr/bin/bash" nil "tmp" nil "-c" "uname -r")
-(set-buffer "tmp")
-(if (string-match ".*MANJARO" (buffer-string))
-    (setq org-roam-graph-viewer "firefox")
-  (setq org-roam-graph-viewer "~/Downloads/basilisk/basilisk"))
+;; exwm setting
+;;(require 'exwm)
+;;(require 'exwm-config)
+;;(exwm-config-default)
+;;(require 'exwm-xim)
+;;(exwm-xim-enable)
+;;(push ?\C-\\ exwm-input-prefix-keys)
+
+;; telega setting
+(setq telega-proxies
+      '(:server "127.0.0.1" :port 1080 :enable t
+		:type (:@type "proxyTypeSocks5"
+			      :username "" :password "")))
+(telega-notifications-mode 1)
+
 ;; magit setting
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
@@ -160,12 +170,14 @@
   (setq ivy-fixed-height-minibuffer t))
   ;; fixed height
 
-;; ivy-rich setting
-(require 'ivy-rich)
+;; all-icons-ivy-rich
+(all-the-icons-ivy-rich-mode 1)
 (ivy-rich-mode 1)
-(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
-
-;; 
+  ;; The icon size
+(setq all-the-icons-ivy-rich-icon-size 1.0)
+  ;; Definitions for ivy-rich transformers.
+  ;; See `ivy-rich-display-transformers-list' for details."
+all-the-icons-ivy-rich-display-transformers-list
 
 ;; multiple-cursors setting
 (require 'multiple-cursors)
@@ -178,7 +190,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Sarasa Term SC" :foundry "????" :slant normal :weight normal :height 120 :width normal)))))
 
 ;; yasnippet setting
 (require 'yasnippet)
@@ -190,24 +202,4 @@
 (require 'moe-theme)
 (powerline-moe-theme)
 (moe-theme-set-color 'red)
-
-;; exwm setting
-(require 'exwm)
-(require 'exwm-config)
-(exwm-config-default)
-(require 'exwm-xim)
-(exwm-xim-enable)
-(push ?\C-\\ exwm-input-prefix-keys)
-
-;; telega setting
-(setq telega-proxies
-      (list
-       '(:server "0.0.0.0" :port 8080 :enable :false
-                 :type (:@type "proxyTypeSocks5"
-                               :username "xxx" :password "test"))
-       '(:server "127.0.0.1" :port 20170 :enable t
-                 :type (:@type "proxyTypeSocks5"
-                               :username "" :password ""))
-       ))
-(telega-notifications-mode 1)
 

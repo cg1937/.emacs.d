@@ -22,9 +22,7 @@ With prefix arg FORCE quit without confirmation.
 \(fn FORCE)" t nil)
 
 (autoload 'telega-report-bug "telega" "\
-Create bug report for https://github.com/zevlg/telega.el/issues.
-
-\(fn)" t nil)
+Create bug report for https://github.com/zevlg/telega.el/issues." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "telega" '("telega-")))
 
@@ -102,7 +100,7 @@ Backend for `company' to complete recent hashtags.
 ;;;### (autoloads nil "telega-filter" "telega-filter.el" (0 0 0 0))
 ;;; Generated autoloads from telega-filter.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "telega-filter" '("custom" "contact" "chat-list" "can-view-statistics" "has-" "any" "all" "archive" "main" "label" "last-message-by-me" "type" "top" "tracking" "telega-" "search" "saved-messages" "restriction" "pin" "permission" "ids" "verified" "online-status" "unread" "unmuted" "not" "name" "define-telega-filter")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "telega-filter" '("all" "any" "archive" "can-view-statistics" "chat-list" "contact" "custom" "define-telega-filter" "has-" "ids" "label" "last-message-by-me" "main" "name" "not" "online-status" "permission" "pin" "restriction" "saved-messages" "search" "telega-" "top" "tracking" "type" "unmuted" "unread" "verified")))
 
 ;;;***
 
@@ -157,6 +155,11 @@ or call the function `telega-mode-line-mode'.")
 (autoload 'telega-mode-line-mode "telega-modes" "\
 Toggle display of the unread chats/mentions in the modeline.
 
+If called interactively, enable Telega-Mode-Line mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (defvar telega-autoplay-mode nil "\
@@ -172,10 +175,20 @@ or call the function `telega-autoplay-mode'.")
 (autoload 'telega-autoplay-mode "telega-modes" "\
 Automatically play animation messages.
 
+If called interactively, enable Telega-Autoplay mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'telega-squash-message-mode "telega-modes" "\
 Toggle message squashing minor mode.
+
+If called interactively, enable Telega-Squash-Message mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -192,10 +205,21 @@ or call the function `global-telega-squash-message-mode'.")
 (autoload 'global-telega-squash-message-mode "telega-modes" "\
 Global mode to squashing messages.
 
+If called interactively, enable Global Telega-Squash-Message mode
+if ARG is positive, and disable it if ARG is zero or negative.
+If called from Lisp, also enable the mode if ARG is omitted or
+nil, and toggle it if ARG is `toggle'; disable the mode
+otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'telega-edit-file-mode "telega-modes" "\
 Minor mode to edit files from Telegram messages.
+
+If called interactively, enable Telega-Edit-File mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -226,6 +250,11 @@ or call the function `telega-notifications-mode'.")
 
 (autoload 'telega-notifications-mode "telega-notifications" "\
 Telega D-Bus notifications.
+
+If called interactively, enable Telega-Notifications mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -258,7 +287,7 @@ Telega D-Bus notifications.
 ;;;### (autoloads nil "telega-sort" "telega-sort.el" (0 0 0 0))
 ;;; Generated autoloads from telega-sort.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "telega-sort" '("chatbuf-" "join-date" "order" "online-members" "member-count" "telega-" "title" "unread-count" "define-telega-sorter")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "telega-sort" '("chatbuf-" "define-telega-sorter" "join-date" "member-count" "online-members" "order" "telega-" "title" "unread-count")))
 
 ;;;***
 
