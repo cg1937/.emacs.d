@@ -4,7 +4,7 @@
 (package-initialize)
 
 ;; theme
-(load-theme 'moe-light t)
+(load-theme 'leuven t)
 ;; disable menu bar
 (menu-bar-mode -1)
 ;; disable tool bar
@@ -40,7 +40,7 @@
    '("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))
+   '(leuven-theme all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))
  '(tool-bar-mode nil))
 
 ;; setting the default encoding method
@@ -183,7 +183,7 @@ all-the-icons-ivy-rich-display-transformers-list
 ;; powerline (use moe-theme)
 ;; customize theme
 (require 'powerline)
-(require 'moe-theme)
-(powerline-moe-theme)
-(moe-theme-set-color 'red)
+(powerline-default-theme)
 
+;; rainbow identfiers settings
+(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
