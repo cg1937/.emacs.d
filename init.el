@@ -21,9 +21,12 @@
 (require 'org-protocol)
 (require 'org-roam-protocol)
 
+;; load package folder setting
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+(require 'customize-init)
+
 ;; all-the-icons
 (require 'all-the-icons)
-(set-fontset-font t 'unicode "Symbola" nil 'append)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -43,25 +46,12 @@
    '(leuven-theme all-the-icons-ivy-rich ivy-rich unicode-fonts telega exwm grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))
  '(tool-bar-mode nil))
 
-;; setting the default encoding method
-(prefer-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-
-;; setting the org-mode
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-;; enable auto newline
-
 ;; setting input method
 (require 'pyim)
 (require 'pyim-basedict)
 (pyim-basedict-enable)
 (setq default-input-method "pyim")
 (setq pyim-default-scheme 'xiaohe-shuangpin)
-
-;; load package folder setting
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 ;; aweshell (replace Eshell) setting
 (require 'aweshell)
@@ -94,26 +84,6 @@
 ;; magit setting
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
-
-;; customize function
-(defun open-my-init-file()
-  ;; open init.el  
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-(global-set-key(kbd "<f5>") 'open-my-init-file)
-
-(defun load-my-init-file()
-  ;; load init.el
-  (interactive)
-  (load "~/.emacs.d/init.el"))
-(global-set-key(kbd "<f7>") 'load-my-init-file)
-
-(defun preview-org-mode-file-for-html()
-  ;; preview .org file use HTML format
-  (interactive)
-  (org-html-export-as-html)
-  (browse-url-of-buffer))
-(global-set-key(kbd "<f6>") 'preview-org-mode-file-for-html)
 
 ;; avy setting
 (require 'avy)
@@ -179,11 +149,6 @@ all-the-icons-ivy-rich-display-transformers-list
 ;; yasnippet setting
 (require 'yasnippet)
 (yas-global-mode 1)
-
-;; powerline (use moe-theme)
-;; customize theme
-(require 'powerline)
-(powerline-default-theme)
 
 ;; rainbow identfiers settings
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
