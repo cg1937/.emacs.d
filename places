@@ -1,5 +1,38 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cg1937/.emacs.d/"
+(("/home/cg1937/.emacs.d/lisp/sanity.el" . 727)
+ ("/home/cg1937/.emacs.d/lisp/elegance.el" . 798)
+ ("/home/cg1937/.emacs.d/init.el" . 4471)
+ ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math.org" . 4295)
+ ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math.html" . 7464)
+ ("/mnt/c/Users/cg1937/Desktop/Postgraduate/"
+  (dired-filename . "/mnt/c/Users/cg1937/Desktop/Postgraduate/mindmap"))
+ ("/home/cg1937/.emacs.d/recentf" . 846)
+ ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math-org-temp_files/"
+  (dired-filename . "/mnt/c/Users/cg1937/Desktop/Postgraduate/math-org-temp_files/.."))
+ ("/home/cg1937/test.org" . 162)
+ ("/home/cg1937/test.html" . 3291)
+ ("/home/cg1937/Public/basilisk/browser/blocklist.xml" . 18434)
+ ("/home/cg1937/Documents/politics.org" . 16)
+ ("/home/cg1937/Documents/politics.html" . 1991)
+ ("/home/cg1937/.emacs.d/elpa/ag-20190726.9/ag-autoloads.el" . 3157)
+ ("/home/cg1937/.emacs.d/elpa/org-super-agenda-20200310.1337/org-super-agenda-autoloads.el" . 1169)
+ ("/home/cg1937/.emacs.d/elpa/ht-20200217.2331/ht-autoloads.el" . 370)
+ ("/home/cg1937/.emacs.d/elpa/ts-20191010.210/ts-autoloads.el" . 392)
+ ("/home/cg1937/.emacs.d/elpa/org-bullets-20200317.1740/org-bullets-autoloads.el" . 542)
+ ("/mnt/c/Users/cg1937/Desktop/test.cpp" . 111)
+ ("/"
+  (dired-filename . "/dev"))
+ ("/mnt/c/Users/cg1937/"
+  (dired-filename . "/mnt/c/Users/cg1937/Favorites"))
+ ("/mnt/c/Users/cg1937/Desktop/math.org" . 2298)
+ ("/mnt/c/Users/cg1937/Desktop/#math.org#" . 1092)
+ ("/mnt/c/Users/cg1937/No" . 526)
+ ("/home/cg1937/InfoSystem/Note/20200526174222-注册表.org" . 224)
+ ("/home/cg1937/.emacs.d/elpa/org-roam-20200614.612/org-roam-autoloads.el" . 7461)
+ ("/home/cg1937/.emacs.d/elpa/emacsql-sqlite3-20200608.217/emacsql-sqlite3-autoloads.el" . 460)
+ ("/home/cg1937/"
+  (dired-filename . "/home/cg1937/.ICEauthority"))
+ ("/home/cg1937/.emacs.d/"
   (dired-filename . "/home/cg1937/.emacs.d/transient"))
  ("/home/cg1937/.emacs.d/lisp/"
   (dired-filename . "/home/cg1937/.emacs.d/lisp/eshell-did-you-mean.el"))
@@ -7,20 +40,4 @@
  ("/home/cg1937/InfoSystem/Note/"
   (dired-filename . "/home/cg1937/InfoSystem/Note/org-roam.db"))
  ("/home/cg1937/InfoSystem/Note/20200526174916-windows输入法添加小鹤双拼.org" . 62)
- ("/home/cg1937/InfoSystem/Note/20200526174222-注册表.org" . 224)
- ("/home/cg1937/.emacs.d/recentf" . 898)
- ("/home/cg1937/.emacs.d/lisp/elegance.el" . 1662)
- ("/home/cg1937/.emacs.d/init.el" . 1855)
- ("/home/cg1937/.emacs.d/elpa/leuven-theme-20200513.1742/leuven-theme-autoloads.el" . 918)
- ("/home/cg1937/.emacs.d/lisp/sanity.el" . 1047)
- ("/home/cg1937/elegant-emacs-master/data/Calculus.org" . 741)
- ("/home/cg1937/elegant-emacs-master/data/Gaussian-Integral.org" . 18)
- ("/home/cg1937/elegant-emacs-master/data/Article.org" . 112)
- ("/home/cg1937/elegant-emacs-master/data/Languages.org" . 1817)
- ("/home/cg1937/elegant-emacs-master/data/Example.py" . 433)
- ("/home/cg1937/elegant-emacs-master/"
-  (dired-filename . "/home/cg1937/elegant-emacs-master/data"))
- ("/home/cg1937/elegant-emacs-master/data/ltximg/"
-  (dired-filename . "/home/cg1937/elegant-emacs-master/data/ltximg/.."))
- ("/home/cg1937/elegant-emacs-master/data/"
-  (dired-filename . "/home/cg1937/elegant-emacs-master/data/Gaussian-Integral.org")))
+ ("/home/cg1937/.emacs.d/elpa/leuven-theme-20200513.1742/leuven-theme-autoloads.el" . 918))

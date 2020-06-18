@@ -27,20 +27,20 @@
   ;; open init.el  
   (interactive)
   (find-file "~/.emacs.d/init.el"))
-(global-set-key(kbd "<f5>") 'open-my-init-file)
+(global-set-key (kbd "<f5>") 'open-my-init-file)
 
 (defun load-my-init-file()
   ;; load init.el
   (interactive)
   (load "~/.emacs.d/init.el"))
-(global-set-key(kbd "<f7>") 'load-my-init-file)
+(global-set-key (kbd "<f7>") 'load-my-init-file)
 
 (defun preview-org-mode-file-for-html()
   ;; preview .org file use HTML format
   (interactive)
   (org-html-export-as-html)
   (browse-url-of-buffer))
-(global-set-key(kbd "<f6>") 'preview-org-mode-file-for-html)
+(global-set-key (kbd "<f6>") 'preview-org-mode-file-for-html)
 
 (defun custom/kill-this-buffer ()
   ;; kill current buffer

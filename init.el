@@ -36,11 +36,14 @@
     ("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default)))
  '(package-selected-packages
    (quote
-    (leuven-theme grip-mode org-preview-html nyan-mode moe-theme powerline-evil powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim cnfonts dracula-theme))))
+    (ag org-super-agenda org-bullets leuven-theme grip-mode org-preview-html nyan-mode moe-theme powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim dracula-theme))))
 
 ;; setting the org-mode
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 ;; enable auto newline
+;; setting the org-bullets
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; setting input method
 (require 'pyim)
@@ -61,7 +64,7 @@
       (after-init . org-roam-mode)
       :custom
       (org-roam-directory "~/InfoSystem/Note/")
-      (org-roam-graph-viewer "~/Downloads/basilisk/basilisk")
+      (org-roam-graph-viewer "~/Public/basilisk/basilisk")
       :bind (:map org-roam-mode-map
               (("C-c n l" . org-roam)
                ("C-c n f" . org-roam-find-file)
@@ -136,4 +139,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-  '(org-table ((t (:family "Sarasa Term SC")))))
+ '(org-table ((t (:family "Sarasa Term SC")))))
