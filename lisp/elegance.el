@@ -10,12 +10,12 @@
 ;; -------------------------------------------------------------------
 
 ;; Font and frame size
-(set-face-font 'default "LM Mono Prop 10 13")
+(set-face-font 'default "LM Mono 10 13")
 (setq default-frame-alist
       (append (list '(width  . 72) '(height . 40)
                     '(vertical-scroll-bars . nil)
                     '(internal-border-width . 24)
-                    '(font . "LM Mono Prop 10 13"))))
+                    '(font . "LM Mono 10 13"))))
 (set-frame-parameter (selected-frame)
                      'internal-border-width 24)
 

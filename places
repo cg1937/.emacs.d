@@ -1,16 +1,26 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cg1937/.emacs.d/lisp/sanity.el" . 727)
- ("/home/cg1937/.emacs.d/lisp/elegance.el" . 798)
- ("/home/cg1937/.emacs.d/init.el" . 4471)
+(("/home/cg1937/"
+  (dired-filename . "/home/cg1937/.ICEauthority"))
+ ("/home/cg1937/Documents/leetcode/124.cpp" . 356)
+ ("/home/cg1937/Documents/emacs/hello-emacs-master/"
+  (dired-filename . "/home/cg1937/Documents/emacs/hello-emacs-master/Emacs中的Web浏览器--eww.org"))
+ ("/home/cg1937/Documents/emacs/hello-emacs-master/Emacs中的Web浏览器--eww.org" . 2468)
+ ("/home/cg1937/Documents/emacs/hello-emacs-master/Emacs中的shell--Eshell使用笔记.org" . 2654)
+ ("/home/cg1937/.emacs.d/recentf" . 844)
+ ("/home/cg1937/Documents/emacs/hello-emacs-master/Emacs中的RSS阅读器--newsticker.org" . 224)
+ ("/home/cg1937/.emacs.d/lisp/elegance.el" . 690)
+ ("/home/cg1937/.emacs.d/init.el" . 1851)
+ ("/home/cg1937/math.org" . 325)
+ ("/home/cg1937/.emacs.d/elpa/auctex-12.2.3/auctex-autoloads.el" . 13784)
+ ("/home/cg1937/.emacs.d/elpa/cdlatex-20200506.739/cdlatex-autoloads.el" . 2644)
+ ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math/math.org" . 960)
+ ("/home/cg1937/.emacs.d/lisp/sanity.el" . 1312)
  ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math.org" . 4295)
  ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math.html" . 7464)
  ("/mnt/c/Users/cg1937/Desktop/Postgraduate/"
   (dired-filename . "/mnt/c/Users/cg1937/Desktop/Postgraduate/mindmap"))
- ("/home/cg1937/.emacs.d/recentf" . 846)
  ("/mnt/c/Users/cg1937/Desktop/Postgraduate/math-org-temp_files/"
   (dired-filename . "/mnt/c/Users/cg1937/Desktop/Postgraduate/math-org-temp_files/.."))
- ("/home/cg1937/test.org" . 162)
- ("/home/cg1937/test.html" . 3291)
  ("/home/cg1937/Public/basilisk/browser/blocklist.xml" . 18434)
  ("/home/cg1937/Documents/politics.org" . 16)
  ("/home/cg1937/Documents/politics.html" . 1991)
@@ -30,8 +40,6 @@
  ("/home/cg1937/InfoSystem/Note/20200526174222-注册表.org" . 224)
  ("/home/cg1937/.emacs.d/elpa/org-roam-20200614.612/org-roam-autoloads.el" . 7461)
  ("/home/cg1937/.emacs.d/elpa/emacsql-sqlite3-20200608.217/emacsql-sqlite3-autoloads.el" . 460)
- ("/home/cg1937/"
-  (dired-filename . "/home/cg1937/.ICEauthority"))
  ("/home/cg1937/.emacs.d/"
   (dired-filename . "/home/cg1937/.emacs.d/transient"))
  ("/home/cg1937/.emacs.d/lisp/"

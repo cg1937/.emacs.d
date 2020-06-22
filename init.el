@@ -1,6 +1,6 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
-;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
 
 ;; load package folder setting
@@ -8,7 +8,6 @@
 
 ;;elegance theme setting
 (require 'elegance)
-
 ;; customize configure setting
 (require 'sanity)
 
@@ -36,7 +35,7 @@
     ("7675ffd2f5cb01a7aab53bcdd702fa019b56c764900f2eea0f74ccfc8e854386" "d0fe9efeaf9bbb6f42ce08cd55be3f63d4dfcb87601a55e36c3421f2b5dc70f3" default)))
  '(package-selected-packages
    (quote
-    (ag org-super-agenda org-bullets leuven-theme grip-mode org-preview-html nyan-mode moe-theme powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim dracula-theme))))
+    (auctex cdlatex ag org-super-agenda org-bullets leuven-theme grip-mode org-preview-html nyan-mode moe-theme powerline yasnippet-snippets yasnippet zones region-occurrences-highlighter multiple-cursors flyspell-correct-avy-menu counsel magit company org-roam posframe all-the-icons pyim dracula-theme))))
 
 ;; setting the org-mode
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
@@ -44,6 +43,10 @@
 ;; setting the org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(setq Tex-auto-save t)
+(setq Tex-parse-self t)
+(setq-default Tex-master nil)
+(add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 
 ;; setting input method
 (require 'pyim)
@@ -51,9 +54,6 @@
 (pyim-basedict-enable)
 (setq default-input-method "pyim")
 (setq pyim-default-scheme 'xiaohe-shuangpin)
-
-;; aweshell (replace Eshell) setting
-;; (require 'aweshell)
 
 ;; company-mode setting
 (add-hook 'after-init-hook 'global-company-mode)
@@ -132,7 +132,7 @@
                     :background "white"
                     :foreground "black"
                     :distant-foreground "black"
-)
+                    )
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
